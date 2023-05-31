@@ -1,16 +1,14 @@
-# This is a sample Python script.
+height = float(input("Enter your height in meters"))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+weight = float(input("Enter your weight in kg"))
 
+bmi = round((weight / height ** 2), 2)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if bmi < 18.5:
+    print(f"Your Bmi is {bmi} and you are Underage")
+elif 18.5 < bmi <= 24.9:
+    print(f"Your Bmi is {bmi} and you are Normal")
+elif 25 < bmi <= 29.29:
+    print(f"Your Bmi is {bmi} and you are Overage")
+else:
+    print(f"Your Bmi is {bmi} and you are Obese")
